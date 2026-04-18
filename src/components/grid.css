@@ -1,0 +1,73 @@
+/* ===== MASONRY ===== */
+
+.masonry-grid {
+    display: flex;
+    margin-left: -12px;
+  }
+  
+  .masonry-column {
+    padding-left: 12px;
+  }
+  
+  /* .masonry-column > div {
+    margin-bottom: 12px;
+  } */
+  
+  /* ===== BASE ITEM ===== */
+  
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* 🟥 LARGE BOX */
+  .grid-item.large .grid-bg {
+    padding-top: 80%;
+  }
+  
+  /* 🟩 SMALL BOX */
+  .grid-item.small .grid-bg {
+    padding-top: 50%;
+  }
+  
+  /* IMAGE */
+  .grid-bg {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+  }
+  
+  /* HOVER */
+  .grid-item:hover .grid-bg {
+    transform: scale(1.05);
+  }
+  
+  /* OVERLAY */
+  .grid-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
+    transition: 0.3s;
+  }
+  
+  .grid-item:hover .grid-overlay {
+    background: rgba(0,0,0,0.45);
+  }
+  
+  /* TEXT */
+  .grid-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-content h2 {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
