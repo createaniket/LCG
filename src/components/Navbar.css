@@ -1,0 +1,53 @@
+
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* LEFT MENU ICON */
+  .menu-icon span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #000;
+    margin: 4px 0;
+  }
+  
+  /* CENTER LOGO */
+  .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .logo {
+    height: 32px;
+    object-fit: contain;
+  }
+  
+  /* RIGHT LINKS */
+  .nav-right {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .nav-right a {
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  /* CONNECT BUTTON */
+  .btn-connect {
+    padding: 8px 16px;
+    background: #000;
+    color: #fff !important;
+    font-size: 12px;
+  }
