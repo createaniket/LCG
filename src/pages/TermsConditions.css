@@ -1,0 +1,79 @@
+
+  /* ===== LAYOUT ===== */
+  .legal {
+    background: var(--bg);
+    padding: 120px 24px;
+  }
+  
+  .legal__container {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: var(--font-family);
+    color: var(--text);
+    font-size: var(--body-size);
+    line-height: var(--line-height);
+  }
+  
+  /* ===== HEADER ===== */
+  .legal__header {
+    margin-bottom: 80px;
+  }
+  
+  .legal__eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  
+  .legal__title {
+    font-size: var(--title-size);
+    font-weight: 500;
+    color: var(--heading);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  
+  .legal__intro {
+    max-width: 560px;
+  }
+  
+  /* ===== SECTIONS ===== */
+  .legal__section {
+    padding: 32px 0;
+    border-top: 1px solid var(--line);
+    transition: transform 0.2s ease;
+  }
+  
+  .legal__section:hover {
+    transform: translateY(-2px);
+  }
+  
+  .legal__section:first-of-type {
+    border-top: none;
+  }
+  
+  /* ===== HEADINGS ===== */
+  .legal__section h2 {
+    font-size: var(--heading-size);
+    font-weight: 500;
+    color: var(--heading);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  
+  /* ===== TEXT ===== */
+  .legal__section p {
+    margin-bottom: 12px;
+  }
+  
+  /* ===== LIST ===== */
+  .legal__section ul {
+    padding-left: 18px;
+  }
+  
+  .legal__section li {
+    margin-bottom: 8px;
+  }
