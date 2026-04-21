@@ -45,7 +45,7 @@ const Connect = () => {
         phone: "",
         email: "",
         data: "",
-        formType: "contact",
+        formType: "contactLCG",
       });
 
       setTimeout(() => navigate("/"), 1500);
@@ -64,7 +64,7 @@ const Connect = () => {
         </div>
       )}
 
-      <SEO title="Contact" description="Contact Lowercase" url="/contact" />
+      <SEO title="Contact" description="Contact Lowercase Group" url="/contact" />
 
       <section className="connect">
         <div className="connect__container">

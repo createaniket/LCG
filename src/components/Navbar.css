@@ -1,53 +1,102 @@
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
 
-  /* NAVBAR */
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 40px;
-    background: #f4f4f4;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* LEFT MENU ICON */
-  .menu-icon span {
+/* LEFT MENU ICON */
+.nav-left {
+  display: none;
+  cursor: pointer;
+  z-index: 20; /* ✅ FIX: ensure clickable */
+}
+
+.menu-icon span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #000;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* OPTIONAL: hamburger animation */
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* CENTER LOGO */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* ✅ FIX: keep behind hamburger */
+}
+
+.logo {
+  height: 32px;
+  object-fit: contain;
+}
+
+/* RIGHT LINKS (DESKTOP) */
+.nav-right {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+/* CONNECT BUTTON */
+.btn-connect {
+  padding: 8px 16px;
+  background: #000;
+  color: #fff !important;
+  font-size: 12px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  /* show hamburger */
+  .nav-left {
     display: block;
-    width: 22px;
-    height: 2px;
-    background: #000;
-    margin: 4px 0;
   }
-  
-  /* CENTER LOGO */
-  .nav-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .logo {
-    height: 32px;
-    object-fit: contain;
-  }
-  
-  /* RIGHT LINKS */
+
+  /* mobile menu hidden by default */
   .nav-right {
-    display: flex;
-    gap: 25px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background: #f4f4f4;
+    flex-direction: column;
     align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    display: none;
+    z-index: 10;
   }
-  
-  .nav-right a {
-    text-decoration: none;
-    color: #000;
-    font-size: 12px;
-    letter-spacing: 1px;
+
+  /* show when active */
+  .nav-right.active {
+    display: flex;
   }
-  
-  /* CONNECT BUTTON */
-  .btn-connect {
-    padding: 8px 16px;
-    background: #000;
-    color: #fff !important;
-    font-size: 12px;
-  }
+}
