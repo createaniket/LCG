@@ -1,0 +1,114 @@
+:root {
+    --bg: #000000;
+    --card: #0b0b0f;
+    --input: #111116;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #ffffff;
+    --muted: #a1a1aa;
+  
+    --radius: 14px;
+  }
+  
+  /* ===== PAGE ===== */
+  .connect {
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  
+  /* ===== FORM CONTAINER ===== */
+  .connect__container {
+    width: 100%;
+    max-width: 420px;
+  }
+  
+  /* ===== FORM ===== */
+  .connect__form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  /* ===== FIELD ===== */
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .field label {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  
+  /* ===== INPUTS ===== */
+  .field input,
+  .field textarea {
+    background: var(--input);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--text);
+    outline: none;
+  
+    transition: all 0.25s ease;
+  }
+  
+  /* placeholder */
+  .field input::placeholder,
+  .field textarea::placeholder {
+    color: #6b7280;
+  }
+  
+  /* focus glow */
+  .field input:focus,
+  .field textarea:focus {
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05);
+  }
+  
+  /* textarea resize */
+  .field textarea {
+    resize: none;
+    min-height: 120px;
+  }
+  
+  /* ===== BUTTON ===== */
+  .submit-btn {
+    margin-top: 10px;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    padding: 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .submit-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  .submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* ===== THANK YOU ===== */
+  .thankyou-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    z-index: 1000;
+  }
