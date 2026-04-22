@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -115,7 +116,7 @@ body {
   align-items: center;
 }
 
-/* FIX: transparent by default */
+/* overlay */
 .extra-box::after {
   content: "";
   position: absolute;
@@ -124,7 +125,7 @@ body {
   transition: background 0.4s ease;
 }
 
-/* FIX: gradient on hover */
+/* gradient on hover */
 .extra-box:hover::after {
   background: linear-gradient(
     180deg,
@@ -203,6 +204,7 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
   /* Hide desktop layouts */
   .desktop-layout {
     display: none !important;
@@ -215,40 +217,43 @@ body {
     width: 100%;
   }
 
-  /* Each row */
+  /* ROW spacing */
   .m-row {
     display: flex;
     width: 100%;
+    /* gap: 4px; */
+    /* margin-bottom: 4px; */
   }
 
-  /* Base tile styles */
+  /* Base tile */
   .m-box {
     position: relative;
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  /* Full width tile */
+  /* FULL WIDTH */
   .m-box.full {
     width: 100%;
-    height: 220px;
+    height: 240px;
+    background-position: center bottom; /* ✅ IMPORTANT FIX */
   }
 
-  /* Half width tile (side by side) */
+  /* HALF WIDTH */
   .m-box.half {
     width: 50%;
-    height: 180px;
+    height: 160px;
+    background-position: center;
   }
 
-  /* Dark overlay on mobile tiles */
+  /* Overlay */
   .m-box::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     transition: 0.4s ease;
   }
 
@@ -265,7 +270,7 @@ body {
     font-weight: bold;
   }
 
-  /* Multi-tile block on mobile */
+  /* MULTI TILE MOBILE */
   .m-box.full.multi-tile-mobile {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -298,7 +303,7 @@ body {
   }
 
   .multi-tile-mobile .multi-item:hover {
-    background: #1a1a1a;
+    background: #1a1a0a;
   }
 
   .multi-tile-mobile .multi-item:last-child {
