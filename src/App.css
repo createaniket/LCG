@@ -121,7 +121,6 @@ body {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
   inset: 0;
-
   transition: background 0.4s ease;
 }
 
@@ -197,40 +196,112 @@ body {
   grid-column: span 2;
 }
 
+/* ===== MOBILE LAYOUT (hidden on desktop) ===== */
+.mobile-layout {
+  display: none;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .layout {
+  /* Hide desktop layouts */
+  .desktop-layout {
+    display: none !important;
+  }
+
+  /* Show mobile layout */
+  .mobile-layout {
+    display: flex;
     flex-direction: column;
-    height: auto;
+    width: 100%;
   }
 
-  .col {
-    flex-direction: column;
+  /* Each row */
+  .m-row {
+    display: flex;
+    width: 100%;
   }
 
-  .parent-h {
-    flex-direction: column;
+  /* Base tile styles */
+  .m-box {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .parent-v {
-    flex-direction: row;
-  }
-
-  .box {
-    min-height: 220px;
-  }
-
-  .row {
-    flex-direction: column;
-  }
-
-  .extra-box {
+  /* Full width tile */
+  .m-box.full {
     width: 100%;
     height: 220px;
   }
 
-  .extra-box.multi-tile {
+  /* Half width tile (side by side) */
+  .m-box.half {
+    width: 50%;
+    height: 180px;
+  }
+
+  /* Dark overlay on mobile tiles */
+  .m-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease;
+  }
+
+  .m-box h2 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  /* Multi-tile block on mobile */
+  .m-box.full.multi-tile-mobile {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #0a0a0a;
     height: auto;
-    min-height: 220px;
+    min-height: 200px;
+    gap: 0;
+    padding: 0;
+  }
+
+  .m-box.full.multi-tile-mobile::after {
+    display: none;
+  }
+
+  .multi-tile-mobile .multi-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: 1px solid #1f1f1f;
+    padding: 18px 8px;
+    line-height: 1.6;
+    transition: background 0.3s ease;
+  }
+
+  .multi-tile-mobile .multi-item:hover {
+    background: #1a1a1a;
+  }
+
+  .multi-tile-mobile .multi-item:last-child {
+    grid-column: span 2;
   }
 }
