@@ -9,6 +9,7 @@
     --radius: 14px;
   }
   
+
   /* ===== PAGE ===== */
   .connect {
     min-height: 100vh;
@@ -24,7 +25,23 @@
     width: 100%;
     max-width: 420px;
   }
+
+  .contactform_heading{
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+  }
   
+  .contactform_desc{
+
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+
   /* ===== FORM ===== */
   .connect__form {
     display: flex;

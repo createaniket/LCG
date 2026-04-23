@@ -57,7 +57,7 @@
 @media (max-width: 768px) {
   .footer-inner {
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
     text-align: center;
   }
 

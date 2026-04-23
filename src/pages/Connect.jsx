@@ -69,7 +69,9 @@ const Connect = () => {
       <section className="connect">
         <div className="connect__container">
 
-          <p className="contactform_heading">Connect with Us</p>
+          {/* <p className="contactform_heading">Connect with Us</p> */}
+
+          {/* <p className="contactform_desc">Please provide a concise overview of your enquiry. We prioritise serious proposals, partnerships and strategic opportunities.</p> */}
 
           <form className="connect__form" onSubmit={submit}>
 
@@ -78,7 +80,7 @@ const Connect = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="e.g. John Smith"
+                // placeholder="e.g. John Smith"
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -89,7 +91,7 @@ const Connect = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="e.g. example@gmail.com"
+                // placeholder="e.g. example@gmail.com"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -100,7 +102,7 @@ const Connect = () => {
               <input
                 type="number"
                 name="phone"
-                placeholder="e.g. 9876543210"
+                // placeholder="e.g. 9876543210"
                 value={formData.phone}
                 onChange={handleChange}
               />
@@ -110,7 +112,7 @@ const Connect = () => {
               <label>Message</label>
               <textarea
                 name="data"
-                placeholder="Let us know how we can help"
+                placeholder="Please provide a concise overview of your enquiry. We prioritise serious proposals, partnerships and strategic opportunities."
                 value={formData.data}
                 onChange={handleChange}
                 rows="5"

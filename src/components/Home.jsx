@@ -107,8 +107,8 @@ const Home = () => {
       {/* 📱 MOBILE LAYOUT — UNCHANGED */}
       <div className="mobile-layout">
         <div className="m-row">
-          <div className="m-box full" style={{ backgroundImage: `url(${Property})` }}>
-            <h2>Property</h2>
+          <div className="m-box full" style={{ backgroundImage: `url(${Events})` }}>
+            <h2>Events</h2>
           </div>
         </div>
 
@@ -122,8 +122,8 @@ const Home = () => {
         </div>
 
         <div className="m-row">
-          <div className="m-box full" style={{ backgroundImage: `url(${Events})` }}>
-            <h2>Events</h2>
+          <div className="m-box full" style={{ backgroundImage: `url(${Property})` }}>
+            <h2>Property</h2>
           </div>
         </div>
 
