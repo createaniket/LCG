@@ -1,9 +1,6 @@
 /* NAVBAR */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row-reverse;
+
   padding: 18px 40px;
   background: #f4f4f4;
   border-bottom: 1px solid #ddd;
@@ -39,10 +36,10 @@
 
 /* CENTER LOGO */
 .nav-center {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1; /* ✅ FIX: keep behind hamburger */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
@@ -71,6 +68,17 @@
   color: #fff !important;
   font-size: 12px;
 }
+
+
+.topnavcontent{
+  color: #000;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  font-weight: 400;
+  text-align: center;
+}
+
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {

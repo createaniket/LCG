@@ -8,6 +8,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import Connect from "./pages/Connect";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 
 
@@ -24,6 +25,8 @@ function App() {
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/connect" element={<Connect />} />
       </Routes>
+
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -9,6 +9,7 @@ export default function Navbar() {
 
   return (
     <header className="navbar">
+      <p className="topnavcontent">A DIVERSIFIED PRIVATE GROUP OF BRANDS, REAL ESTATE & STRATEGIC VENTURES</p>
 
       {/* Left - menu icon */}
       <div 
@@ -32,15 +33,6 @@ export default function Navbar() {
           />
         </Link>
       </div>
-
-      {/* Right - Links */}
-      <nav className={`nav-right ${menuOpen ? "active" : ""}`}>
-        <Link to="/privacy" onClick={() => setMenuOpen(false)}>PRIVACY POLICY</Link>
-        <Link to="/terms" onClick={() => setMenuOpen(false)}>TERMS</Link>
-        <Link to="/connect" className="btn-connect" onClick={() => setMenuOpen(false)}>
-          CONNECT
-        </Link>
-      </nav>
 
     </header>
   );
