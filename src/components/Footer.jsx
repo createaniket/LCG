@@ -11,7 +11,7 @@ const Footer = () => {
         {/* LEFT */}
         <div className="footer-left">
  
-        <Link to="/terms-of-service">Terms of Service</Link>
+        <Link to="/terms">Terms</Link>
           <span>|</span>
           <Link to="/privacy-policy">Privacy Policy</Link>
           <span>|</span>
